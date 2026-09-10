@@ -1,5 +1,24 @@
 package unipe.edu.br;
+public class Triangulo implements FiguraGeometrica {
+    private double base;
+    private double altura;
 
-public class Triangulo {
+    public Triangulo(double base, double altura) {
+        this.base = base;
+        this.altura = altura;
+    }
 
+    public double calculaArea() {
+        return (this.base * this.altura) / 2;
+    }
+
+    public String getNomeFigura() {
+        return "Triângulo";
+    }
+
+    @Override
+    public String toString() {
+        return getNomeFigura() + " [base=" + base + ", altura=" + altura +
+               ", area=" + calculaArea() + "]";
+    }
 }
